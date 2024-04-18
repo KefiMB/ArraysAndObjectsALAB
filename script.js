@@ -8,9 +8,7 @@ const objectToCsv = function (data) {
 
   const headers = Object.keys(data[0]);
 
-
   csvRows.push(headers.join(','));
-
 
   for (const row of data) {
     const values = headers.map(header => {
@@ -54,4 +52,20 @@ const csvData = objectToCsv(data);
 console.log(csvData);
 
 
+// Part 2
 
+const csvColumns= "dataRows"
+for (let i = 0; i < "dataRows"; i++){
+  console.log(dataRows `${(8)}`)
+}
+
+let csvData2 = [
+  ["ID", "Name", "Occupation", "Age"],
+  ["42", "Bruce", "Knight", "41"],
+  ["57", "Bob", "Fry Cook", "19"],
+  ["63", "Blaine", "Quiz Master", "58"],
+  ["98", "Bill", "Doctor's Assistant", "26"]
+];
+console.log(csvData2);
+
+// Part 3
