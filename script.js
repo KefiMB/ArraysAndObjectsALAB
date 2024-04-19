@@ -84,3 +84,28 @@ const groupedObjects = array.reduce((result, obj) => {
  
 console.log(groupedObjects);
 
+//Part 4
+//Part 4
+const array2 = [
+  { id: 42, name: "Bruce", occupation: "Knight", age: 41 },
+  { id: 57, name: "Bob", occupation: "Fry Cook", age: 19 },
+  { id: 63, name: "Blaine", occupation: "Quiz Master", age: 58 },
+  { id: 98, name: "Bill", occupation: "Docto's Assistant", age: 26 },
+];
+
+let arr = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+ { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, 
+ { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, 
+{ id: "98", name: "Bill", occupation: "Doctor’s Assistant", age: "26" }]
+
+let newData1 = arr.splice(1, 1, '{ id: "48", name: "Barry", occupation: "Runner", age: "25" }' )
+console.log(arr)
+
+const newArray = [{id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+{ id: "48", name: "Barry", occupation: "Runner", age: "25"},
+{ id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, 
+{ id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, 
+{ id: "98", name: "Bill", occupation: "Doctor’s Assistant", age: "26"}]
+
+const newData2 = data.concat({id: 7, name: "Bilbo", occupation: "None", age: 111});
+console.log(newArray)
