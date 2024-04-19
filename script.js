@@ -1,4 +1,4 @@
-console.log("Let's do this!")
+console.log("Arrays and Objects!")
 
 //Part 1
 
@@ -70,18 +70,17 @@ console.log(csvData2);
 console.log("===============================")
 
 // Part 3
-let ID = ["42", "57", "63", "98"];
-let Name = ["Bruce", "Bob", "Blaine", "Bill"];
-let Occupation = ["Knight", "Fry Cook", "Quiz Master", "Doctor's Assistant"];
-let Age = ["41", "19", "58", "26"];
+const array = [
+  { id: 42, name: "Bruce", occupation: "Knight", age: 41 },
+  { id: 57, name: "Bob", occupation: "Fry Cook", age: 19 },
+  { id: 63, name: "Blaine", occupation: "Quiz Master", age: 58 },
+  { id: 98, name: "Bill", occupation: "Docto's Assistant", age: 26 },
+];
+ 
+const groupedObjects = array.reduce((result, obj) => {
+  (result[obj.category] = result[obj.category] || []).push(obj);
+  return result;
+}, {});
+ 
+console.log(groupedObjects);
 
-function createObj(key, values) {
-let result = [ID, Name, Occupation, Age];
-  let length = Math.min(keys.length, values.length);
-    for (let i = 0; i < length; i++) {
-        result[keys[i]] = values[i];
-    }
-}
-console.log({ID, Name, Occupation, Age});
-
-//Part 4
