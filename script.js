@@ -35,13 +35,13 @@ const data = [{
   "Occupation": "Fry Cook",
   "Age": 19
 },
-  {
+{
   "ID": 63,
   "Name": "Blaine",
   "Occupation": "Quiz Master",
   "Age": 58
 },
-  {
+{
   "ID": 98,
   "Name": "Bill",
   "Occupation": "Doctors Assistant",
@@ -50,13 +50,13 @@ const data = [{
 ];
 const csvData = objectToCsv(data);
 console.log(csvData);
-
+console.log("===============================")
 
 // Part 2
 
-const csvColumns= "dataRows"
-for (let i = 0; i < "dataRows"; i++){
-  console.log(dataRows `${(8)}`)
+const csvColumns = "dataRows"
+for (let i = 0; i < "dataRows"; i++) {
+  console.log(dataRows`${(8)}`)
 }
 
 let csvData2 = [
@@ -67,5 +67,21 @@ let csvData2 = [
   ["98", "Bill", "Doctor's Assistant", "26"]
 ];
 console.log(csvData2);
+console.log("===============================")
 
 // Part 3
+let ID = ["42", "57", "63", "98"];
+let Name = ["Bruce", "Bob", "Blaine", "Bill"];
+let Occupation = ["Knight", "Fry Cook", "Quiz Master", "Doctor's Assistant"];
+let Age = ["41", "19", "58", "26"];
+
+function createObj(key, values) {
+let result = [ID, Name, Occupation, Age];
+  let length = Math.min(keys.length, values.length);
+    for (let i = 0; i < length; i++) {
+        result[keys[i]] = values[i];
+    }
+}
+console.log({ID, Name, Occupation, Age});
+
+//Part 4
