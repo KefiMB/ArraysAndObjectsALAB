@@ -109,6 +109,19 @@ const newArray = [{id: "42", name: "Bruce", occupation: "Knight", age: "41" },
 
 const newData2 = data.concat({id: 7, name: "Bilbo", occupation: "None", age: 111});
 console.log(newArray)
+
+function calAvg(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+const arr2 = [41, 25, 19, 58, 26];
+const average = calAvg(arr2);
+console.log("Average:", average);
+
 console.log("===============================")
 
 //Part 5
