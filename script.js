@@ -83,8 +83,8 @@ const groupedObjects = array.reduce((result, obj) => {
 }, {});
  
 console.log(groupedObjects);
+console.log("===============================")
 
-//Part 4
 //Part 4
 const array2 = [
   { id: 42, name: "Bruce", occupation: "Knight", age: 41 },
@@ -98,7 +98,7 @@ let arr = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, 
 { id: "98", name: "Bill", occupation: "Doctor’s Assistant", age: "26" }]
 
-let newData1 = arr.splice(1, 1, '{ id: "48", name: "Barry", occupation: "Runner", age: "25" }' )
+let newData1 = arr.splice(1, 1, {id: "48", name: "Barry", occupation: "Runner", age: "25"})
 console.log(arr)
 
 const newArray = [{id: "42", name: "Bruce", occupation: "Knight", age: "41" },
@@ -109,3 +109,60 @@ const newArray = [{id: "42", name: "Bruce", occupation: "Knight", age: "41" },
 
 const newData2 = data.concat({id: 7, name: "Bilbo", occupation: "None", age: 111});
 console.log(newArray)
+console.log("===============================")
+
+//Part 5
+ const dataArr = [
+{ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+{ id: "48", name: "Barry", occupation: "Runner", age: "25"},
+{ id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, 
+{ id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, 
+{ id: "7", name: "Bilbo", occupation: "None", age: "111"}
+ ];
+
+ const objectsToCsv = function (data) {
+  const objToCsv = [];
+  const headers = Object.keys(data[0]);
+  csvRows.push(headers.join(','));
+
+  for (const row of data) {
+    const values = headers.map(header => {
+      const val = row[header]
+      return `"${val}"`;
+    });
+
+
+    csvRows.push(values.join(','));
+  }
+
+  return csvRows.join('\n');
+};
+
+const data3 = [{
+  "ID": 42,
+  "Name": "Bruce",
+  "Occupation": "Knight",
+  "Age": 41
+},
+{
+  "ID": 48 ,
+  "Name": "Barry",
+  "Occupation": "Runner",
+  "Age": 25
+},
+{
+  "ID": 63,
+  "Name": "Blaine",
+  "Occupation": "Quiz Master",
+  "Age": 58
+},
+{
+  "ID": 7,
+  "Name": "Bilbo",
+  "Occupation": "None",
+  "Age": 111
+},
+];
+const csvData3 = objectToCsv(data3);
+console.log(csvData3);
+console.log("===============================")
